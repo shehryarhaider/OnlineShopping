@@ -2,7 +2,7 @@
 				try{ace.settings.loadState('main-container')}catch(e){}
 			</script>
 
-			<div id="sidebar" class="sidebar                  responsive ace-save-state">
+			<div id="sidebar" class="sidebar responsive ace-save-state">
 				<ul class="nav nav-list">
 					<li class="active">
 						<a href="#">

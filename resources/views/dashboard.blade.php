@@ -18,15 +18,10 @@
 					Dashboard
 				</h1>
 			</div><!-- /.page-header -->
-
-			
-
-					<!-- PAGE CONTENT ENDS -->
-				</div><!-- /.col -->
-			</div><!-- /.row -->
-		</div><!-- /.page-content -->
-	</div>
-</div><!-- /.main-content -->
+				<!-- PAGE CONTENT ENDS -->
+		</div><!-- /.col -->
+	</div><!-- /.row -->
+</div><!-- /.page-content -->
 
 <div class="footer">
 	<div class="footer-inner">
@@ -35,7 +30,6 @@
 				<span class="blue bolder">Ace</span>
 				Application &copy; 2013-2014
 			</span>
-
 			&nbsp; &nbsp;
 			<span class="action-buttons">
 				<a href="#">
@@ -53,7 +47,6 @@
 		</div>
 	</div>
 </div>
-
 <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
 	<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
 </a>
