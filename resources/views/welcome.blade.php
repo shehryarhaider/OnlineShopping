@@ -1,6 +1,5 @@
 @extends('layouts.master')
 @section('content')
-<a href="{{route('test')}}">Hello</a>
    
     <div class="content">
         <div class="title m-b-md">
