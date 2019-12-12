@@ -28,6 +28,6 @@ class CreateUmRolePermissionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_um__role__permissions');
+        Schema::dropIfExists('um_role_permissions');
     }
 }
