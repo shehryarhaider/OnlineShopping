@@ -27,9 +27,9 @@
 							
 
 							<li class="">
-								<a href="typography.html">
+								<a href="{{route('users')}}">
 									<i class="menu-icon fa fa-caret-right"></i>
-									User
+									Users
 								</a>
 
 								<b class="arrow"></b>
