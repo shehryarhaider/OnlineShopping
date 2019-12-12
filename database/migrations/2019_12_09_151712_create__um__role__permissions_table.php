@@ -13,8 +13,10 @@ class CreateUmRolePermissionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('_um__role__permissions', function (Blueprint $table) {
+        Schema::create('um_role_permissions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('role_id');
+            $table->bigInteger('permission_id');
             $table->timestamps();
         });
     }

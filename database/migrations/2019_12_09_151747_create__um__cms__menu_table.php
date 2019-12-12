@@ -13,8 +13,11 @@ class CreateUmCmsMenuTable extends Migration
      */
     public function up()
     {
-        Schema::create('_um__cms__menu', function (Blueprint $table) {
+        Schema::create('cms_menus', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name',20);
+            $table->string('route',20);
+            $table->string('icon_class',50);
             $table->timestamps();
         });
     }

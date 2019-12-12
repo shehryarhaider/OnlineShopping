@@ -13,12 +13,11 @@ class CreateUmPermissionTable extends Migration
      */
     public function up()
     {
-        Schema::create('_um__permission', function (Blueprint $table) {
+        Schema::create('um_permissions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('menu_id');
             $table->string('name');
-            $table->string('name');
-            $table->string('name');
-            $table->string('name');
+            $table->string('route');
             $table->timestamps();
         });
     }
