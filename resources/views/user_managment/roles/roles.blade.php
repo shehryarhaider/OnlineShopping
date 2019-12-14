@@ -2,14 +2,14 @@
 @section('content')
 <div class="row">
     <div class="col-xs-12">
-        <h3 class="header smaller lighter blue">Users</h3>
+        <h3 class="header smaller lighter blue">Roles</h3>
 
         <div class="clearfix">
             <div class="pull-right tableTools-container"></div>
         </div>
         <div class="table-header">
-            <i class="fa fa-users"></i> Users
-            <a href="{{route('user.create')}}"><button class="btn btn-primary" style="float:right;">Add User</button>
+            <i class="fa fa-users"></i> Roles
+            <a href="{{route('role.create')}}"><button class="btn btn-primary" style="float:right;">Add Role</button>
             </a>    
         </div>
 
@@ -33,18 +33,18 @@
 
                 <tbody>
                     <span class="hidden">{{$i=1}}</span>
-                    @foreach ($users as $user)
+                    @foreach ($roles as $user)
                     <tr>
                         <td class="center">
-                           {{$i++}}
+                           1
                         </td>
 
                         <td>
                             <img src="" alt="img">
                         </td>
-                        <td>{{$user->name}}</td>
-                        <td class="hidden-480">{{$user->email}}</td>
-                        <td>{{$user->role_id}}</td>
+                        <td>asdf</td>
+                        <td class="hidden-480">sadf</td>
+                        <td>sdaf</td>
 
                         <td class="hidden-480">
                             <span class="label label-sm label-warning">Expiring</span>
@@ -99,7 +99,70 @@
                         </td>
                     </tr>
                     @endforeach
-                   
+                      <tr>
+                        <td class="center">
+                           1
+                        </td>
+
+                        <td>
+                            <img src="" alt="img">
+                        </td>
+                        <td>asdf</td>
+                        <td class="hidden-480">sadf</td>
+                        <td>sdaf</td>
+
+                        <td class="hidden-480">
+                            <span class="label label-sm label-warning">Expiring</span>
+                        </td>
+
+                        <td class="center">
+                            <div class="hidden-sm hidden-xs action-buttons">
+                                <a class="green" href="#">
+                                    <i class="ace-icon fa fa-pencil bigger-130"></i>
+                                </a>
+
+                                <a class="red" href="#">
+                                    <i class="ace-icon fa fa-trash-o bigger-130"></i>
+                                </a>
+                            </div>
+
+                            <div class="hidden-md hidden-lg">
+                                <div class="inline pos-rel">
+                                    <button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown"
+                                        data-position="auto">
+                                        <i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>
+                                    </button>
+
+                                    <ul
+                                        class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+                                        <li>
+                                            <a href="#" class="tooltip-info" data-rel="tooltip" title="View">
+                                                <span class="blue">
+                                                    <i class="ace-icon fa fa-search-plus bigger-120"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="tooltip-success" data-rel="tooltip" title="Edit">
+                                                <span class="green">
+                                                    <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#" class="tooltip-error" data-rel="tooltip" title="Delete">
+                                                <span class="red">
+                                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>

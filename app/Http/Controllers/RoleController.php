@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use App\Role;
 
-class UserController extends Controller
+class RoleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        return view('user_managment.users.users',compact('users'));
+        $roles = Role::all();
+        return view('user_managment.roles.roles',compact('roles'));
     }
 
     /**
@@ -25,8 +25,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        $isEdit = false;
-        return view('edit',compact('isEdit'));
+        return view('user_managment.roles.add-role');
     }
 
     /**
@@ -37,13 +36,18 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'name' => 'required',
-            'email' => 'required|unique:users,email',
-            'pass' => 'required'
-        ]);
-        User::create($request->all());
-        return redirect()->route('users')->with('msg','User Successfully Created');
+        //
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        //
     }
 
     /**
@@ -54,11 +58,7 @@ class UserController extends Controller
      */
     public function edit($id)
     {
-        $isEdit = true;
-        $data = User::get();
-        $dbuser = User::find($id);
-
-        return view('edit',compact('isEdit','data','dbuser'));
+        //
     }
 
     /**
@@ -70,17 +70,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $request->validate([
-             'pass' => 'required'
-        ]);
-        $user = User::find($id);
-        $user->Name = $request->get('name');
-        $user->Email = $request->get('email');
-        $user->Pass = $request->get('pass');
-        $user->save();
-        //$user::update($request->all());
-        return redirect()->route('users');
-
+        //
     }
 
     /**
@@ -89,10 +79,8 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function delete($id)
+    public function destroy($id)
     {
-        $user = User::find($id);
-        $user->delete();
-        return redirect()->route('users');
+        //
     }
 }
