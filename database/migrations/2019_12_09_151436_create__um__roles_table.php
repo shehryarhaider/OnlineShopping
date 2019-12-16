@@ -13,12 +13,10 @@ class CreateUmRolesTable extends Migration
      */
     public function up()
     {
-        Schema::create('_um__roles', function (Blueprint $table) {
+        Schema::create('um_roles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('name');
-            $table->string('name');
-            $table->string('name');
+            $table->string('description');
             $table->timestamps();
         });
     }
@@ -30,6 +28,6 @@ class CreateUmRolesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_um__roles');
+        Schema::dropIfExists('um_roles');
     }
 }

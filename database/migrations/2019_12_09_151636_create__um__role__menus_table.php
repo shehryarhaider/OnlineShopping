@@ -13,8 +13,10 @@ class CreateUmRoleMenusTable extends Migration
      */
     public function up()
     {
-        Schema::create('_um__role__menus', function (Blueprint $table) {
+        Schema::create('um_role_menus', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('role_id');
+            $table->bigInteger('menu_id');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateUmRoleMenusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_um__role__menus');
+        Schema::dropIfExists('um_role_menus');
     }
 }

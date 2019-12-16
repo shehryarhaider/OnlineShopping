@@ -27,26 +27,23 @@
 							
 
 							<li class="">
-								<a href="typography.html">
+								<a href="{{route('users')}}">
 									<i class="menu-icon fa fa-caret-right"></i>
-									User
+									Users
 								</a>
 
 								<b class="arrow"></b>
 							</li>
 
 							<li class="">
-								<a href="elements.html">
+								<a href="{{route('roles')}}">
 									<i class="menu-icon fa fa-caret-right"></i>
 									Roles
 								</a>
 
 								<b class="arrow"></b>
 							</li>
-
-							
-
-												<b class="arrow"></b>
+							<b class="arrow"></b>
 											</li>
 										</ul>
 									</li>

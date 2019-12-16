@@ -47,7 +47,13 @@
         @include('layouts.header')
         <div class="main-container ace-save-state" id="main-container">
             @include('layouts.sidebar')
-            @yield('content')
+            <div class="main-content">
+                <div class="main-content-inner">
+                    <div class="page-content">
+                        @yield('content')
+                    </div>
+                </div>
+            </div>
         </div>
 
     <!--[if !IE]> -->
@@ -75,6 +81,11 @@
         <script src="{{url('')}}/assets/js/jquery.flot.min.js"></script>
         <script src="{{url('')}}/assets/js/jquery.flot.pie.min.js"></script>
         <script src="{{url('')}}/assets/js/jquery.flot.resize.min.js"></script>
+
+        <!-- DataTable Scripts -->
+        <!-- page specific plugin scripts -->
+            @yield('scripts')
+        <!-- End DataTable Scripts -->
 
         <!-- ace scripts -->
         <script src="{{url('')}}/assets/js/ace-elements.min.js"></script>
