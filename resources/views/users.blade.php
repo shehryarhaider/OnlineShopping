@@ -1,5 +1,6 @@
 @extends('layouts.master')
 @section('content')
+
 <div class="row">
     <div class="col-xs-12">
         <h3 class="header smaller lighter blue">Users</h3>
@@ -17,6 +18,7 @@
 
         <!-- div.dataTables_borderWrap -->
         <div>
+
             <table id="dynamic-table" class="table table-striped table-bordered table-hover">
                 <thead>
                     <tr>
@@ -44,7 +46,7 @@
                         </td>
                         <td>{{$user->name}}</td>
                         <td class="hidden-480">{{$user->email}}</td>
-                        <td>{{$user->role_id}}</td>
+                        <td>{{$user->role->name}}</td>
 
                         <td class="hidden-480">
                             <span class="label label-sm label-warning">Expiring</span>
